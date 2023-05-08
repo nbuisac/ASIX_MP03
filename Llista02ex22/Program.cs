@@ -1,0 +1,15 @@
+﻿int a, b, c;
+int ajuda;
+Console.Write("Entra el valor de a -> ");
+a = Convert.ToInt32(Console.ReadLine());
+Console.Write("Entra el valor de b -> ");
+b = Convert.ToInt32(Console.ReadLine());
+Console.Write("Entra el valor de c -> ");
+c = Convert.ToInt32(Console.ReadLine());
+ajuda = a;
+a = b;
+b = c;
+c = ajuda;
+Console.WriteLine("a val -> " + a);
+Console.WriteLine("b val -> " + b);
+Console.WriteLine("c val -> " + c);
