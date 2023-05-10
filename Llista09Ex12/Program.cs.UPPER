@@ -1,0 +1,28 @@
+NAMESPACE LLISTA09EX12;
+CLASS PROGRAM
+{
+    STATIC VOID MAIN(STRING[] ARGS)
+    {
+        STRING NOMFITXER;
+        STREAMREADER F01;
+        STREAMWRITER F02;
+        CHAR CARACTER;
+
+        CONSOLE.WRITE("ENTRA EL NOM DEL FITXER -> ");
+        NOMFITXER = CONSOLE.READLINE();
+
+        TRY {
+            F01 = NEW STREAMREADER(NOMFITXER);
+            F02 = NEW STREAMWRITER(NOMFITXER.TRIM() + ".UPPER");
+            WHILE (! F01.ENDOFSTREAM) {
+                CARACTER = (CHAR)F01.READ();
+                F02.WRITE(CHAR.TOUPPER(CARACTER));
+            }
+            F01.CLOSE();
+            F02.CLOSE();
+        }
+        CATCH (EXCEPTION E) {
+            CONSOLE.WRITELINE(E.MESSAGE);
+        }
+    }
+}

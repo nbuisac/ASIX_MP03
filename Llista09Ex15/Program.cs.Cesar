@@ -1,0 +1,39 @@
+pcogurceg Nnkuvc09Gz15;
+encuu Rtqitco
+{
+    uvcvke xqkf Ockp(uvtkpi[] ctiu)
+    {
+        eqpuv kpv ENCW = 2;
+
+        uvtkpi pqoHkvzgt;
+        UvtgcoYtkvgt h02;
+        UvtgcoTgcfgt h01;
+        ejct e;
+
+        Eqpuqng.Ytkvg("Gpvtc gn pqo fgn hkvzgt -> ");
+        pqoHkvzgt = Eqpuqng.TgcfNkpg();
+        vta {
+            h01 = pgy UvtgcoTgcfgt(pqoHkvzgt);
+            h02 = pgy UvtgcoYtkvgt(pqoHkvzgt.Vtko() + ".Eguct");
+            yjkng (! h01.GpfQhUvtgco) {
+                // Nngiko ectàevgt
+                e = (ejct) h01.Tgcf();
+                // Vtcpuhqtogo gn ectàevgt
+                kh (e >= 'c' && e <= 'b') {
+                    e = (ejct)(((e - 'c' + ENCW) % ('b' - 'c' + 1)) + 'c');
+                } gnug kh (e >= 'C' && e <= 'B') {
+                    e = (ejct)(((e - 'C' + ENCW) % ('B' - 'C' + 1)) + 'C');
+                }
+
+                // Oquvtgo gn ectàevgt vtcpuhqtocv
+                h02.Ytkvg(e);
+            }
+            h01.Enqug();
+            h02.Enqug();
+        }
+        ecvej (Gzegrvkqp g) {
+            Eqpuqng.YtkvgNkpg(g.Oguucig);
+        }
+
+    }
+}
