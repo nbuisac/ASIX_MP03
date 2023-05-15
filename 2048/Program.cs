@@ -352,7 +352,7 @@ class Program
                 else if (tecla.Key == ConsoleKey.DownArrow) Console.Write("Avall -- ");
                 else if (tecla.Key == ConsoleKey.LeftArrow) Console.Write("Esquerra -- ");
                 else if (tecla.Key == ConsoleKey.RightArrow) Console.Write("Dreta -- ");
-                Console.WriteLine(i);
+                Console.WriteLine(++i);
                 ok = false;
             }
 
