@@ -3,21 +3,23 @@ class Program
 {
     static void Main(string[] args)
     {
-        BinaryWriter fitxerW;
-        int i;
-        Console.WriteLine("Generem i escrivim");
-        fitxerW = new BinaryWriter(File.OpenWrite("prova.dat"));
-        for(i = 0; i < 30; i++) {
-            fitxerW.Write(i);
-            fitxerW.Write(("Hola" + i));
-            Console.Write($"{i,4}");
-        }
-        Console.Write("-1d:" + -1d);
-        fitxerW.Write("@@@@");
-        fitxerW.Write(-1d);
-        fitxerW.Write("@@@@");
-        fitxerW.Write(Math.PI);
-        Console.Write(("PI:" + Math.PI));
-        fitxerW.Close();
+        BinaryReader f1;
+        ushort n1;
+        int n2, n3, n4;
+        string s1;
+
+        f1 = new BinaryReader(File.OpenRead("f1.dat"));
+        n1 = (ushort)f1.ReadInt16();
+        n2 = f1.ReadInt16();
+        n3 = f1.ReadInt16();
+        Console.WriteLine($"{n1} {n2} {n3}");
+        n1 = (ushort)f1.ReadInt16();
+        n2 = f1.ReadInt16();
+        n3 = f1.ReadInt16();
+
+        s1 = f1.ReadString();
+        n4 = f1.ReadInt16();
+        f1.Close();
+        Console.WriteLine($"{n1} {n2} {n3} {n4} {s1}");
     }
 }

@@ -1,5 +1,8 @@
 ara
+barca
 dema
+espanyol
+girona
 temps
 vine
 vora
